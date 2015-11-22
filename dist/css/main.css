@@ -309,3 +309,83 @@ img {
   position: relative;
   overflow: hidden;
 }
+.share-box {
+  width: 78.125%;
+  height: 41.37323944%;
+  position: fixed;
+  top: 250%;
+  background: url(../img/sharePic.jpg) no-repeat;
+  background-size: cover;
+  left: 11%;
+  transform: translate(-50%, -50%);
+  font-size: 2.4em;
+  overflow: hidden;
+  z-index: 100;
+}
+.share-cover {
+  display: none;
+  background: #000;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.bdimgshare-bg {
+  display: none;
+}
+.share-box.bounceInUp {
+  top: 28%;
+}
+.close-share {
+  height: 20.893617%;
+  width: 22%;
+  position: absolute;
+  top: 78.29787234%;
+  left: 37.8%;
+}
+.share-items {
+  padding: 0 7%;
+  position: absolute;
+  top: 19.78723404%;
+  height: 51.06382979%;
+  width: 86%;
+}
+.share-item {
+  width: 16%;
+  height: 41.66666667%;
+  position: absolute;
+}
+.weixin {
+  left: 7%;
+  top: 0;
+}
+.timeline {
+  left: 31%;
+  top: 0;
+}
+.sohu {
+  left: 55%;
+  top: 0;
+}
+.sina {
+  left: 79%;
+  top: 0;
+}
+.qq {
+  top: 58.33333333%;
+  left: 7%;
+}
+.qzone {
+  top: 58.33333333%;
+  left: 31%;
+}
+.copys {
+  top: 58.33333333%;
+  left: 55%;
+}
+.bdsharebuttonbox {
+  display: none;
+}
