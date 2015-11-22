@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	  <meta content="yes" name="apple-mobile-web-app-capable" />
+	  <meta content="yes" name="apple-touch-fullscreen" />
+	  <meta content="telephone=no,email=no" name="format-detection" />
+	  <link rel="stylesheet" href="http://news.sohu.com/upload/huizongyu1122/css/main.css">
+	  <link rel="stylesheet" type="text/css" href="http://news.sohu.com/upload/huizongyu1122/lib/animate.min.css">
+
+	  <link rel="stylesheet" type="text/css" href="http://news.sohu.com/upload/commonzzx/normal.css">
+<!-- 	  <link rel="stylesheet" type="text/css" href="http://news.sohu.com/upload/yursiletestPage1020/lib/bootstrap/css/bootstrap.css"> -->
+	  <script src="../dist/lib/zepto/zepto.js"></script>
+	  <script src="../dist/lib/zepto/touch.js"></script>
+	  <script src="../dist/lib/zepto/event.js"></script>
+	 <!--  <script type="text/javascript" src="http://news.sohu.com/upload/yursiletestPage1020/lib/bootstrap/js/bootstrap.min.js"></script> -->
+	  <script type="text/javascript" src="http://news.sohu.com/upload/yursiletestPage1020/lib/artTemplate/artTemplate.js"></script>
+	  <script src="http://news.sohu.com/upload/commonzzx/preload.js"></script>
+	  
+	 
+	<title>汇总</title>
+	<script type="text/javascript">
+		function BlockMove(event){
+		    //Tell Safari not to move the window.
+		    event.preventDefault();
+		}
+
+		// $(function(){
+		// 	$(".main-container").on()
+		// });
+		function stopMove(event){
+			event.stopPropagation();
+		};
+		function fuck(event){
+			event.preventDefault();
+			event.stopPropagation();
+		};
+	</script>
+
+</head>
+<body>
+	
+	<div class="loading">
+	    <div class="pace">
+	      <div class="pace-progress">
+	        0
+	      </div>
+	    </div>
+	</div>
+
+	<script>
+	  // 自适应屏幕配置
+	  function initView() {
+	    var windowRatio = $(window).width() / 320;
+	    var windowRatio = windowRatio > 2 ? 2 : windowRatio;
+	    $('body').css('font-size', (windowRatio * 62.5/2 + '%'));
+	     // $('.about-container').height(windowRatio * 480);
+
+	  }
+
+	  //懒加载
+	  var loader = new resLoader({
+	    resources: [
+	        "http://news.sohu.com/upload/yursilecz1722/img/title-detail.png",
+			"http://news.sohu.com/upload/yursilecz1722/img/yishi.png",
+			"http://news.sohu.com/upload/yursilecz1722/img/fire4.png",
+			"http://news.sohu.com/upload/yursilecz1722/img/fire1.png",
+			"http://news.sohu.com/upload/yursilecz1722/img/fire6.png",
+			"http://news.sohu.com/upload/yursilecz1722/img/icons.png",
+			"http://news.sohu.com/upload/yursilecz1722/img/fire3.png",
+			"http://news.sohu.com/upload/yursilecz1722/img/fire8.png",
+			"http://news.sohu.com/upload/yursilecz1722/img/fire5.png",
+			"http://mfiles.sohu.com/news/yursilecz1722/img/mainbg.png",
+			"http://news.sohu.com/upload/yursilecz1722/img/title.png",
+			"http://news.sohu.com/upload/yursilecz1722/img/road.png",
+			"http://news.sohu.com/upload/yursilecz1722/img/jinian.png",
+			"http://news.sohu.com/upload/yursilecz1722/img/cover.png",
+			"http://news.sohu.com/upload/yursilecz1722/img/fire2.png",
+			"http://news.sohu.com/upload/yursilecz1722/img/start.png",
+			"http://news.sohu.com/upload/yursilecz1722/img/fire7.png",
+			"http://news.sohu.com/upload/yursilecz1722/img/fires.png"
+			
+	    ],
+	    onStart: function(total) {},
+	    onProgress: function(current, total) {
+	      var percent = parseInt(current / total * 100) + '%';
+	      $('.pace-progress').text(percent);
+	    },
+	    onComplete: function(total) {
+	      $('.loading').hide();
+	      initView();
+	    }
+	  });
+	  loader.start();
+	  </script>
+
+	  <script type="text/javascript" src="http://news.sohu.com/upload/huizongyu1122/js/h5_data.js"></script>
+
+	  <div class="main">
+	  	<div class="views clearfix">
+	  		
+	  	
+	  	<div class="about-container">
+	  		<div class="about-topbar">
+	  			<h4>关于我们</h4>
+	  		<!-- 	<img src="http://news.sohu.com/upload/yursileh51023/img/about-back.png" alt="" class="about-back"> -->
+	  		<img src="http://news.sohu.com/upload/huizongyu1122/img/about-back1.png" alt="" class="about-back">
+	  		</div>
+
+	  		<div class="about-box">
+
+	  			<div class="what-gongfang">
+	  				<img src="http://news.sohu.com/upload/yursileh51023/img/ydlogo.png" alt="" class="logo">
+		  			<h3 class="what">什么是移动工坊</h3>
+		  			<p class="what-detail">
+		  				什么是移动工坊是什么什么是移动工坊是什么什么是移动工坊是什么什么是移动工坊是什么什么是移动工坊是什么什么是移动工坊是什么什么是移动工坊是什么什么是移动工坊是什么什么是移动工坊是什么什么是移动工坊是什么什么是移动工坊是什么什么是移动工坊是什么?
+		  			</p>
+	  			</div>
+
+	  			<div class="what-we">
+	  				<img src="http://news.sohu.com/upload/yursileh51023/img/hello.png" alt="" class="member-logo">
+		  			<h3 class="what">我们是谁？</h3>
+		  			<div class="member-detail">
+		  				<div class="sorts clearfix">
+		  					<label for="" class="sort">策划：</label>
+		  					<p class="member">某某、某某某、某某某、某某、某某某、某某</p>
+		  				</div>
+		  				<div class="sorts">
+		  					<label for="" class="sort">设计：</label>
+		  					<p class="member">某某某、某某某、某某某</p>
+		  				</div>
+		  				<div class="sorts">
+		  					<label for="" class="sort">技术：</label>
+		  					<p class="member">某某、某某、某某某、某某某</p>
+		  				</div>	
+		  			</div>
+		  			<div class="ewm-box">
+		  				<img src="http://news.sohu.com/upload/yursileh51023/img/ewm.png" alt="" class="ewm">
+		  				<p class="ewm-advice">
+		  					长按二维码，<br/>
+							关注移动工坊官方微信<br/>
+							获取更多移动资讯<br/>
+		  				</p>
+		  			</div>
+	  			</div>
+
+	  			<!-- <div class="invite-box"> -->
+	  				<img src="http://news.sohu.com/upload/huizongyu1122/img/invite.png" alt="" class="invite-img">
+	  			<!-- </div> -->
+
+	  		<!-- 	<div class="bdsharebuttonbox">
+	  				<a href="#" class="bds_more" data-cmd="more"></a>
+	  				<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+	  				<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	  				<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+	  				<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+	  				<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	  			</div> -->
+				<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+				</script>
+	  			
+
+	  		</div>
+
+	  		<img src="http://news.sohu.com/upload/yursileh51023/img/about-bg.png" alt="" class="about-bg">
+	  	</div>
+	  	<div class="main-container">
+	  		<div class="topbar">
+	  			<div class="about"></div>
+	  			<div class="search"></div>
+	  		</div>
+
+	  		<script type="text/html" id="load-main-tpl">
+  			
+			        <figure class="product-1">
+			        
+			        	
+		  				<img src="{{$data.img}}" alt="">
+		  				<h3>{{$data.title}}</h3>
+		  				<p>{{$data.content}}</p>
+		  				<span class="urla" data-url={{$data.url}}></span>
+		  				<div class="p-cover">
+		  					<div class="p-center">
+			  					<img src="http://news.sohu.com/upload/huizongyu1122/img/click.png" alt="">
+			  					<span>再次点击查看</span>
+		  					</div>
+		  					
+		  				</div>
+		  				
+		  			</figure>
+	  			
+  			</script>
+
+	  		<div class="first-box clearfix" id="main-h5">
+	  			<!-- <figure class="product-1">
+	  				<img src="http://news.sohu.com/upload/yursiletestPage1020/img/first.png" alt="">
+	  				<h3>一秒钟到底有多长?  一秒钟到底有多长?一秒钟到底有多长?一秒钟到底有多长?HOW LONG IS ONE SECOND?</h3>
+	  				<p>你能精确按出1秒钟么？</p>
+	  			</figure> -->
+	  			
+	  		</div>
+
+	  		
+			
+
+			 <script id="load-content-tpl" type="text/html"> 
+			 	{{each $data as item index}} 
+			        <figure class="product">
+			        
+			        	
+		  				<img src="{{item.img}}" alt="">
+		  				<h3>{{item.title}}</h3>
+		  				<p>{{item.content}}</p>
+		  				<span class="urla" data-url={{item.url}}></span>
+		  				<div class="p-cover">
+		  					<div class="p-center">
+			  					<img src="http://news.sohu.com/upload/huizongyu1122/img/click.png" alt="">
+			  					<span>再次点击查看</span>
+		  					</div>
+		  					
+		  				</div>
+		  				
+		  			</figure>
+	  			{{/each}}
+		    </script>
+	  		<div class="falls" id="load-content">
+	  			<!-- <figure class="product">
+	  				<img src="http://news.sohu.com/upload/yursiletestPage1020/img/small.png" alt="">
+	  				<h3>1一秒钟到底有多长?  一秒钟到底有多长?一秒钟到底有多长?一秒钟到底有多长?HOW LONG IS ONE SECOND?</h3>
+	  				<p>你能精确按出1秒钟么？</p>
+	  			</figure>
+	  			 -->
+	  		</div>
+
+	  		<div class="pagination clearfix">
+	  			<button class="left-5">上5页</button>
+	  			<button class="left">上一页</button>
+	  			<div class="pageInfo">
+	  				<span class="currentPage">1</span>
+	  				<span class="totalPage">/85</span>
+	  			</div>
+	  			<button class="right">下一页</button>
+	  			<button class="right-5">下5页</button>
+	  		</div>
+
+	  	</div>
+	  	<div class="search-container">
+	  		
+	  		<input type="text" class="search-ipt">
+	  		
+	  	</div>
+	  </div>
+	  </div>
+
+	  <script type="text/javascript">
+	  	// 三个页面的切换
+
+	  	var bodyOriginHeight;
+	  	var aboutOriginHeight;
+
+	  	$(".about").tap(function(){
+	  		aboutOriginHeight = $(".about-container").height();
+	  		bodyOriginHeight = document.body.scrollHeight;
+	  		$(".main,.views").height(aboutOriginHeight).css("overflow-y","hidden");
+	  		$(".views").removeClass("main-show").addClass("about-show");
+
+	  		//添加动画
+
+	  		$(".logo,.what,.what-detail,.member-logo,.sorts").addClass("bounceIn animated");
+	  	});
+
+	  	$(".about-back").tap(function(){
+	  		$(".views").removeClass("about-show").addClass("main-show");
+	  		$(".main,.views").height("initial").css("overflow-y","initial");
+	  		$(".logo,.what,.what-detail,.member-logo,.sorts,.ewm,.ewm-advice,.invite-img").removeClass("bounceIn animated");
+	  	});
+
+	  	$(".about-container").on("touchmove",function(){
+	  		if(document.body.scrollTop!=0){
+  				$(".ewm,.ewm-advice,.invite-img").addClass("bounceIn animated");
+	  		}
+	  		
+	  	});
+
+	  	function changeView(){
+
+	  	}
+
+
+	  	function initMainH5(){
+	  		var mainH5Content = template('load-main-tpl', main_h5);  
+        	document.getElementById("main-h5").innerHTML = mainH5Content;
+	  	}
+	  	initMainH5();
+
+	  	var numPerpage = 10;
+	 	var pageSize = Math.ceil(h5_data.length/numPerpage);
+		var pagetpl_data = [];
+		var currentPage;
+		// var historyState = [];
+		(function(){
+			for(var i = 0;i<pageSize;i++){
+				pagetpl_data.push(i+1);
+			}
+
+			$(".totalPage").text("/"+pageSize);	
+		})();
+		//初始化pageNum
+    	//初始化第一页
+    	renderByPageNum(1);
+    	
+
+    	$(".left").tap(function(){
+    		if(currentPage>1){
+				renderByPageNum(currentPage-1);
+    		}	
+    	});
+    	$(".right").tap(function(){
+    		if(currentPage<pageSize){
+    			renderByPageNum(currentPage+1);
+    		}       		
+    	});
+    	$(".right-5").tap(function(){
+    		renderByPageNum(currentPage+5);
+    	});
+    	$(".left-5").tap(function(){
+    		renderByPageNum(currentPage-5);
+    	});
+
+    	      	
+		
+    	function renderByPageNum(pageNum){
+    		changeHistroy(pageNum); 
+    		renderByPageNumWithoutHistory(pageNum);
+
+
+    	};
+    	
+    	function renderByPageNumWithoutHistory(pageNum){
+
+    		currentPage = pageNum;		 		
+    		if(currentPage>5){
+    			$(".left-5").show();
+    		}
+    		if(pageSize - currentPage >5){
+    			$(".right-5").show();
+    		}
+    		$(".yu-page").removeClass("yu-page-active");
+    		$(".yu-page").eq(pageNum-1).addClass("yu-page-active");
+    		if(pageNum*10>h5_data.length){
+    			currentPageData = h5_data.slice((pageNum-1)*10,h5_data.length);
+    		}else{
+    			currentPageData = h5_data.slice((pageNum-1)*10,(pageNum)*10);
+    		}
+    		currentPageContent = template('load-content-tpl', currentPageData);  
+        	document.getElementById("load-content").innerHTML = currentPageContent;
+        	// renderFalls();
+        	var maxH = renderFalls();
+			$(".falls").height(maxH);
+			$(".currentPage").text(pageNum);
+			document.body.scrollTop = 0;
+    	};
+    	
+    	window.onpopstate = function(){
+    		renderByPageNumWithoutHistory(history.state.page);
+    	};
+    	
+    	function changeHistroy(pageNum){
+    		var historyState = {};
+    		historyState.page = pageNum;
+    		currentPage = pageNum;
+    		history.pushState(historyState, "页面标题", "#page="+pageNum);
+    	};
+	  	// var currentPageContent = template('load-content-tpl', h5_data);  
+	   //  document.getElementById("load-content").innerHTML = currentPageContent;
+
+
+
+	   function renderFalls(){
+	  		var products = $(".product");
+	  		var leftH = 0;
+	  		var rightH = 0;
+	  		products.eq(0).css({
+	  			left:0,
+	  			top:leftH
+	  		});
+
+	  		products.eq(1).css({
+				right:0,
+				top:rightH,
+				"margin-right":"2.45%"
+			});
+
+			leftH = products.eq(0).height()+10;
+			rightH = products.eq(1).height()+10;
+
+	  		products.slice(2).each(function(i,v){
+	  			//左右交替
+	  			/*	
+
+	  			if(i%2==0){
+	  				$(v).css({
+	  					left:0,
+	  					top:leftH+"px"
+	  				});
+	  		
+	  				leftH = $(v).outerHeight()+leftH+10;
+	  			}else{
+	  				$(v).css({
+	  					right:0,
+	  					top:rightH+"px",
+	  					"margin-right":"2.45%"
+	  				});
+	  				rightH = $(v).outerHeight()+rightH+10;
+	  			}
+	  			*/
+
+	  			//最短优先
+	  			$(v).removeClass("fall-left fall-right");
+	  			if(leftH>rightH){		
+	  				$(v).addClass("fall-right");
+	  				$(v).css({
+	  					"top":rightH+"px"
+	  				});
+	  				rightH = $(v).outerHeight()+rightH+10;
+	  			}else{
+	  				$(v).addClass("fall-left");
+	  				$(v).css({"top":leftH+"px"});
+	  				leftH = $(v).outerHeight()+leftH+10;
+	  			}
+	  		});
+
+
+	  		return leftH>rightH?leftH:rightH
+	  	}
+
+		window.onload = function(){	
+			var maxH = renderFalls();
+			$(".falls").css("height",maxH+"px");
+		}
+
+
+		$("#main-h5").tap(function(){
+			$(".p-cover").removeClass("bounceInDown animated")
+			$(".product-1 .p-cover").addClass("bounceInDown animated");
+		});
+
+		$("#main-h5 .p-cover").tap(function(){
+			var url = $("#main-h5 .urla").data("url");
+			document.location.href = url;
+		});
+
+
+		$(".falls").delegate(".product","tap",function(){
+			 // console.log($(this).css("position"));
+			 // var tpl = "<div class='p-cover'><div>"
+			 	$(".p-cover").removeClass("bounceInDown animated");
+			 $(this).children(".p-cover").addClass("bounceInDown animated");
+			
+		});
+		$(".falls").delegate(".p-cover","tap",function(){
+			var url = $(this).parents(".product").children(".urla").data("url");
+			document.location.href = url;
+		})
+
+	  </script>
+
+
+</body>
+</html>
